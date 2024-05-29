@@ -10,8 +10,9 @@ public class Demo_Looping
         Demo_Looping loop=new Demo_Looping();
 //        loop.For_Loop();
 
-        loop.While_Loop();
+//        loop.While_Loop();
 
+        loop.dowhile_loop();
     }
 
     public void For_Loop()
@@ -84,8 +85,30 @@ public class Demo_Looping
 
     public void dowhile_loop()
     {
+        int count =0;
+        int staffcount=5;
+        do
+        {
+            System.out.println("Staff Registerno :"+staffcount);
+            System.out.println(" Enter your entry time ?");
+            double time=scan.nextDouble();
 
+            if((time>=8.0) &&( time<=9.0))
+            {
+                System.out.println("Perfect Time....!");
+            }
+            else
+            {
+                System.out.println("imperfect time -your salary is decrease 10%");
+                count++;
+            }
 
+            staffcount--;
+
+        }
+        while(staffcount>0);
+
+        System.out.println("today late comer staff count :"+count);
 
     }
 }
